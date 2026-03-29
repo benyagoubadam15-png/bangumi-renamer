@@ -1,6 +1,6 @@
 {
   "name": "bangumi-renamer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Rename anime/TV/movie files to Infuse-compatible naming using TMDB metadata",
   "type": "module",
   "bin": {
