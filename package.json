@@ -1,7 +1,7 @@
 {
   "name": "bangumi-renamer",
   "version": "1.0.0",
-  "description": "Rename anime/TV/movie files to Infuse-compatible naming using TMDB metadata",
+  "description": "Rename anime/TV/movie files using TMDB metadata. Works with Infuse, Plex, Emby, Jellyfin, Kodi and more.",
   "type": "module",
   "bin": {
     "bangumi-renamer": "dist/cli.js"
