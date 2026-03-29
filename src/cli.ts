@@ -58,7 +58,7 @@ export async function runCli(argv: string[]) {
   program
     .name('bangumi-renamer')
     .description(helpMsg.helpDescription)
-    .version('1.0.0', '-V, --version', helpMsg.helpLabelDisplayVersion)
+    .version('1.1.0', '-V, --version', helpMsg.helpLabelDisplayVersion)
     .helpOption('-h, --help', helpMsg.helpLabelDisplayHelp)
     .addHelpText('after', '\n' + helpMsg.helpExamples)
     .addHelpCommand(false);
