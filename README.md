@@ -10,6 +10,24 @@ Rename anime/TV/movie files using [TMDB](https://www.themoviedb.org/) metadata. 
 
 ![screenshot](https://raw.githubusercontent.com/RuochenLyu/bangumi-renamer/main/assets/screenshot-en.png)
 
+## Quick Start
+
+```bash
+npx bangumi-renamer rename ./Frieren.S01.1080p
+```
+
+That's it. The tool auto-detects the show name from the directory, searches TMDB, and lets you pick the right match.
+
+## Before / After
+
+```
+Before:                                              After:
+[SubGroup] Frieren - 01 [1080p].mkv           →  Frieren - S01E01 - The Journey's End.mkv
+[SubGroup] Frieren - 01 [1080p].zh-cn.ass     →  Frieren - S01E01 - The Journey's End.zh-cn.ass
+[SubGroup] Frieren - 02 [1080p].mkv           →  Frieren - S01E02 - It Didn't Have to Be Magic....mkv
+Argo.2012.BluRay.mkv                          →  Argo (2012).mkv
+```
+
 ## Features
 
 - **TV/Anime**: Renames to `Show Name - S01E01 - Episode Title.ext`
@@ -28,7 +46,7 @@ Rename anime/TV/movie files using [TMDB](https://www.themoviedb.org/) metadata. 
 npm install -g bangumi-renamer
 ```
 
-Or run directly:
+Or run directly with `npx`:
 
 ```bash
 npx bangumi-renamer rename ./path
@@ -106,6 +124,42 @@ bangumi-renamer rename ./path --tmdb-id 209867 -s 1 -y --json
 | `-y, --yes` | Skip confirmation |
 | `--json` | Output as JSON |
 | `-l, --lang <lang>` | Language for CLI output |
+
+## JSON Output
+
+When using `--json`, the tool outputs structured JSON to stdout:
+
+**Rename success:**
+```json
+{
+  "command": "rename",
+  "success": true,
+  "mediaType": "tv",
+  "tmdbId": 209867,
+  "showName": "Frieren: Beyond Journey's End",
+  "filesRenamed": 12,
+  "entries": [
+    { "old": "[SubGroup] Frieren - 01.mkv", "new": "Frieren - S01E01 - The Journey's End.mkv" }
+  ]
+}
+```
+
+**Dry-run:**
+```json
+{
+  "command": "rename",
+  "dryRun": true,
+  "mediaType": "tv",
+  "tmdbId": 209867,
+  "showName": "Frieren: Beyond Journey's End",
+  "entries": [...]
+}
+```
+
+**Error:**
+```json
+{ "command": "rename", "success": false, "error": "No video files found" }
+```
 
 ## Naming Format
 

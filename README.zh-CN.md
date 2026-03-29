@@ -10,6 +10,24 @@
 
 ![screenshot](https://raw.githubusercontent.com/RuochenLyu/bangumi-renamer/main/assets/screenshot-zh.png)
 
+## 快速开始
+
+```bash
+npx bangumi-renamer rename ./葬送的芙莉莲.S01.1080p
+```
+
+就这样。工具会自动从目录名提取作品名称，搜索 TMDB，让你选择正确的匹配项。
+
+## 效果对比
+
+```
+处理前：                                              处理后：
+[字幕组] 葬送的芙莉莲 - 01 [1080p].mkv         →  葬送的芙莉莲 - S01E01 - 旅途的终点.mkv
+[字幕组] 葬送的芙莉莲 - 01 [1080p].zh-cn.ass   →  葬送的芙莉莲 - S01E01 - 旅途的终点.zh-cn.ass
+[字幕组] 葬送的芙莉莲 - 02 [1080p].mkv         →  葬送的芙莉莲 - S01E02 - 不一定非得是魔法不可…….mkv
+逃离德黑兰.Argo.2012.BluRay.mkv                →  逃离德黑兰 (2012).mkv
+```
+
 ## 功能
 
 - **剧集/动漫**：重命名为 `作品名 - S01E01 - 集标题.ext`
@@ -106,6 +124,42 @@ bangumi-renamer rename ./path --tmdb-id 209867 -s 1 -y --json
 | `-y, --yes` | 跳过确认 |
 | `--json` | 以 JSON 格式输出 |
 | `-l, --lang <lang>` | CLI 语言 |
+
+## JSON 输出
+
+使用 `--json` 时，工具输出结构化 JSON 到 stdout：
+
+**重命名成功：**
+```json
+{
+  "command": "rename",
+  "success": true,
+  "mediaType": "tv",
+  "tmdbId": 209867,
+  "showName": "葬送的芙莉莲",
+  "filesRenamed": 12,
+  "entries": [
+    { "old": "[字幕组] 葬送的芙莉莲 - 01.mkv", "new": "葬送的芙莉莲 - S01E01 - 旅途的终点.mkv" }
+  ]
+}
+```
+
+**预览模式：**
+```json
+{
+  "command": "rename",
+  "dryRun": true,
+  "mediaType": "tv",
+  "tmdbId": 209867,
+  "showName": "葬送的芙莉莲",
+  "entries": [...]
+}
+```
+
+**错误：**
+```json
+{ "command": "rename", "success": false, "error": "未找到视频文件" }
+```
 
 ## 命名格式
 

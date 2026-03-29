@@ -18,16 +18,29 @@
     "README.zh-CN.md",
     "LICENSE"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuochenLyu/bangumi-renamer.git"
+  },
+  "homepage": "https://github.com/RuochenLyu/bangumi-renamer",
+  "bugs": {
+    "url": "https://github.com/RuochenLyu/bangumi-renamer/issues"
+  },
   "keywords": [
     "anime",
     "bangumi",
     "rename",
     "tmdb",
     "infuse",
+    "plex",
+    "emby",
+    "jellyfin",
+    "kodi",
     "tv",
     "movie",
     "subtitle",
-    "media"
+    "media",
+    "cli"
   ],
   "license": "MIT",
   "engines": {
